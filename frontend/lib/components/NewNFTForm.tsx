@@ -99,7 +99,12 @@ function NewNFTForm() {
           }}
         >
           <section className="input-section">
-            <input value={name} onChange={handleNameChange} type="text" placeholder="Name" />
+            <input
+              value={name}
+              onChange={handleNameChange}
+              type="text"
+              placeholder="Name"
+            />
             <input
               onChange={handleSymbolChange}
               type="text"
@@ -187,7 +192,8 @@ function NewNFTForm() {
                 name.trim(),
                 symbol.trim(),
                 description.trim(),
-                imageFile
+                imageFile,
+                attributes
               );
 
               if (!result.metadataURI) {
