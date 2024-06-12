@@ -1,0 +1,258 @@
+{
+  "address": "5noUdXL9uS5pNnmsxSfEHYo2yXBYkRwQJRpYd5AfqaHJ",
+  "metadata": {
+    "name": "launchpad",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "init_new_nft_inx",
+      "discriminator": [
+        58,
+        193,
+        140,
+        156,
+        216,
+        44,
+        54,
+        78
+      ],
+      "accounts": [
+        {
+          "name": "mint",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "metadata",
+          "writable": true
+        },
+        {
+          "name": "system_program"
+        },
+        {
+          "name": "sysvar_instructions"
+        },
+        {
+          "name": "master_edition",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "mpl_token_metadata"
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "uri",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "init_new_token_inx",
+      "discriminator": [
+        116,
+        184,
+        61,
+        111,
+        198,
+        10,
+        216,
+        246
+      ],
+      "accounts": [
+        {
+          "name": "mint",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "metadata",
+          "writable": true
+        },
+        {
+          "name": "system_program"
+        },
+        {
+          "name": "sysvar_instructions"
+        },
+        {
+          "name": "master_edition",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "mpl_token_metadata"
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "uri",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "mint_new_nft_inx",
+      "discriminator": [
+        23,
+        135,
+        122,
+        190,
+        156,
+        50,
+        44,
+        193
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "metadata",
+          "writable": true
+        },
+        {
+          "name": "system_program"
+        },
+        {
+          "name": "sysvar_instructions"
+        },
+        {
+          "name": "master_edition",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "mpl_token_metadata"
+        },
+        {
+          "name": "destination"
+        },
+        {
+          "name": "associated_token_program"
+        },
+        {
+          "name": "token",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "mint_new_token_inx",
+      "discriminator": [
+        45,
+        31,
+        255,
+        5,
+        178,
+        75,
+        139,
+        18
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "metadata",
+          "writable": true
+        },
+        {
+          "name": "system_program"
+        },
+        {
+          "name": "sysvar_instructions"
+        },
+        {
+          "name": "master_edition",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "mpl_token_metadata"
+        },
+        {
+          "name": "destination"
+        },
+        {
+          "name": "associated_token_program"
+        },
+        {
+          "name": "token",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "CustomError",
+      "msg": "Custom error message"
+    }
+  ],
+  "constants": [
+    {
+      "name": "SEED",
+      "type": "string",
+      "value": "\"anchor\""
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  padding: 0;
+  margin: 0;
+
+  --background-color: #15080f;
+  --button-color: #ff1493;
+  --text-color: #f6e6ee;
+  --primary-color: #dda0bf;
+  --accent-color: #c6ac5f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  gap: 10rem;
+}
+
+.attributes-input {
+  display: flex;
+}
+
+input {
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--text-color);
+  border: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+label {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+}
+
+button {
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  background-color: #ff1493;
+  border: none;
+  color: var(--text-color);
+  font-weight: bolder;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transition: 0.2s ease;
+  background-color: #eb4fa2;
+}
+
+h1,
+h2,
+p {
+  color: var(--text-color);
+}
+
+.tab-heading {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  border-radius: 10px;
+}
+
+.input-section {
+  display: flex;
+}
+
+.input-section > input {
+  flex: 1;
+}
+
+main {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
