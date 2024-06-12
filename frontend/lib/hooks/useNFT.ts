@@ -15,7 +15,7 @@ export function useNFT() {
   async function initNewNFT(
     name: string,
     metadata_uri: string,
-    symbol: string
+    symbol: string,
   ) {
     const mint = anchor.web3.Keypair.generate();
 
@@ -23,7 +23,7 @@ export function useNFT() {
 
     const masterEdition = await getMasterEditionPDA(mint.publicKey);
     try {
-      console.log("here")
+      console.log("here");
       const tx = await program.methods
         .initNewNftInx(name, symbol, metadata_uri)
         .accountsPartial({

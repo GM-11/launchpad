@@ -9,7 +9,8 @@ export default function useIPFS() {
     name: String,
     symbol: String,
     description: String,
-    imageFile: File
+    imageFile: File,
+    attributes?: any[]
   ) {
     try {
       const formData = new FormData();
@@ -26,12 +27,24 @@ export default function useIPFS() {
         },
       });
 
-      const metadata = {
-        name,
-        symbol,
-        description,
-        image: parseHashToURI(resFile.data.IpfsHash),
-      };
+      let metadata;
+
+      if (attributes) {
+        metadata = {
+          name,
+          symbol,
+          description,
+          image: parseHashToURI(resFile.data.IpfsHash),
+          attributes,
+        };
+      } else {
+        metadata = {
+          name,
+          symbol,
+          description,
+          image: parseHashToURI(resFile.data.IpfsHash),
+        };
+      }
 
       const resMetadata = await axios({
         method: "post",

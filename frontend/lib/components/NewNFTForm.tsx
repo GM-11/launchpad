@@ -33,22 +33,22 @@ function NewNFTForm() {
   const { initNewNFT, mintNewNFT } = useNFT();
 
   const handleNameChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => setName(e.target.value.trim()),
+    (e: ChangeEvent<HTMLInputElement>) => setName(e.target.value),
     []
   );
   const handleSymbolChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => setSymbol(e.target.value.trim()),
+    (e: ChangeEvent<HTMLInputElement>) => setSymbol(e.target.value),
     []
   );
   const handleDescriptionChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => setDescription(e.target.value.trim()),
+    (e: ChangeEvent<HTMLInputElement>) => setDescription(e.target.value),
     []
   );
 
   const handleTraitTypeChange = useCallback(
     (index: number, e: ChangeEvent<HTMLInputElement>) => {
       const newAttributes = [...attributes];
-      newAttributes[index].trait_type = e.target.value.trim();
+      newAttributes[index].trait_type = e.target.value;
       setAttributes(newAttributes);
     },
     [attributes]
@@ -57,7 +57,7 @@ function NewNFTForm() {
   const handleValueChange = useCallback(
     (index: number, e: ChangeEvent<HTMLInputElement>) => {
       const newAttributes = [...attributes];
-      newAttributes[index].value = e.target.value.trim();
+      newAttributes[index].value = e.target.value;
       setAttributes(newAttributes);
     },
     [attributes]
@@ -184,9 +184,9 @@ function NewNFTForm() {
                 return;
               }
               const result = await uploadToken(
-                name,
-                symbol,
-                description,
+                name.trim(),
+                symbol.trim(),
+                description.trim(),
                 imageFile
               );
 
