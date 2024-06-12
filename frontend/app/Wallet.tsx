@@ -6,12 +6,9 @@ import {
   WalletProvider,
 } from "@solana/wallet-adapter-react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
-import {
-  WalletModalProvider,
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { clusterApiUrl } from "@solana/web3.js";
+import { SolflareWalletAdapter } from "@solana/wallet-adapter-wallets";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 
@@ -25,7 +22,7 @@ export const Wallet = ({
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
   const wallets = useMemo(
-    () => [],
+    () => [new SolflareWalletAdapter()],
 
     []
   );

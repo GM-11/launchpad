@@ -243,6 +243,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          border: "1px solid #ccc",
           borderRadius: "10px",
           backgroundImage: imagePreviewUrl ? `url(${imagePreviewUrl})` : "none",
           backgroundSize: "cover",
